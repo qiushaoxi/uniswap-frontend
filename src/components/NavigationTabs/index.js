@@ -20,11 +20,11 @@ const tabOrder = [
     textKey: 'swap',
     regex: /\/swap/
   },
-  {
-    path: '/send',
-    textKey: 'send',
-    regex: /\/send/
-  },
+  // {
+  //   path: '/send',
+  //   textKey: 'send',
+  //   regex: /\/send/
+  // },
   {
     path: '/add-liquidity',
     textKey: 'pool',
@@ -41,8 +41,8 @@ const BetaMessage = styled.div`
   padding: 0.5rem 1rem;
   padding-right: 2rem;
   margin-bottom: 1rem;
-  border: 1px solid ${({ theme }) => transparentize(0.6, theme.wisteriaPurple)};
-  background-color: ${({ theme }) => transparentize(0.9, theme.wisteriaPurple)};
+  border: 1px solid ${({ theme }) => transparentize(0.6, theme.yasYellow)};
+  background-color: ${({ theme }) => transparentize(0.9, theme.yasYellow)};
   border-radius: 1rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -50,14 +50,14 @@ const BetaMessage = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: ${({ theme }) => theme.wisteriaPurple};
+  color: ${({ theme }) => theme.yasYellow};
 
   &:after {
     content: '✕';
     top: 0.5rem;
     right: 1rem;
     position: absolute;
-    color: ${({ theme }) => theme.wisteriaPurple};
+    color: ${({ theme }) => theme.yasYellow};
   }
 `
 
@@ -85,7 +85,7 @@ const CloseIcon = styled.div`
   top: 0.5rem;
   right: 1rem;
   position: absolute;
-  color: ${({ theme }) => theme.wisteriaPurple};
+  color: ${({ theme }) => theme.yasYellow};
   :hover {
     cursor: pointer;
   }

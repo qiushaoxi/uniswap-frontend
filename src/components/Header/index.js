@@ -1,9 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Link } from '../../theme'
+// import { Link } from '../../theme'
 import Web3Status from '../Web3Status'
 import { darken } from 'polished'
+import YasPlusIcon from '../../assets/images/yas_plus_logo.png'
+
+const IconWrapper = styled.div`
+  ${({ theme }) => theme.flexColumnNoWrap};
+  align-items: center;
+  justify-content: center;
+  & > img,
+  span {
+    height: ${({ size }) => (size ? size + 'px' : '32px')};
+    width: ${({ size }) => (size ? size + 'px' : '32px')};
+  }
+  ${({ theme }) => theme.mediaWidth.upToMedium`
+    align-items: flex-end;
+  `};
+`
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -20,14 +35,14 @@ const HeaderElement = styled.div`
   align-items: center;
 `
 
-const Nod = styled.span`
-  transform: rotate(0deg);
-  transition: transform 150ms ease-out;
+// const Nod = styled.span`
+//   transform: rotate(0deg);
+//   transition: transform 150ms ease-out;
 
-  :hover {
-    transform: rotate(-10deg);
-  }
-`
+//   :hover {
+//     transform: rotate(-10deg);
+//   }
+// `
 
 const Title = styled.div`
   display: flex;
@@ -45,9 +60,9 @@ const Title = styled.div`
     display: inline;
     font-size: 1rem;
     font-weight: 500;
-    color: ${({ theme }) => theme.wisteriaPurple};
+    color: ${({ theme }) => theme.yasYellow};
     :hover {
-      color: ${({ theme }) => darken(0.1, theme.wisteriaPurple)};
+      color: ${({ theme }) => darken(0.1, theme.yasYellow)};
     }
   }
 `
@@ -57,16 +72,20 @@ export default function Header() {
     <HeaderFrame>
       <HeaderElement>
         <Title>
-          <Nod>
+          {/* <Nod>
             <Link id="link" href="https://uniswap.io">
               <span role="img" aria-label="unicorn">
                 🦄{'  '}
               </span>
             </Link>
-          </Nod>
+          </Nod> 
           <Link id="link" href="https://uniswap.io">
             <h1 id="title">Uniswap</h1>
-          </Link>
+          </Link>*/}
+          <IconWrapper size={24}>
+            <img src={YasPlusIcon} alt={''} />
+          </IconWrapper>
+          <h1 id="title">Codex+</h1>
         </Title>
       </HeaderElement>
       <HeaderElement>
